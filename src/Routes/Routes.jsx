@@ -6,6 +6,7 @@ import Allposts from "@/pages/Allposts";
 import Addposts from "@/pages/Addposts";
 import Editpost from "@/pages/Editpost";
 import Post from "@/pages/Post";
+import YourPostspage from "@/pages/YourPostspage";
 import RequireAuth from "@/pages/RequireAuth";
 import Notfound from "@/pages/Notfound";
 import Homepage from "@/pages/Homepage";
@@ -20,6 +21,7 @@ function AppRoutes() {
           <Route path="login" element={<Loginpage />} />
           <Route path="signup" element={<Signuppage />} />
           <Route path="all-posts" element={<Allposts />} />
+          <Route path="your-posts" element={<YourPostspage/>} />
           <Route path="post/:slug" element={<Post />} />
 
           {/* Protected */}

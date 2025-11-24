@@ -173,6 +173,27 @@ export class PostService {
         }
     }
 
+    /*
+      fetch the user own posts
+    */
+    async getyourposts(userid) {
+        try {
+            return await this.tablesDB.listRows({
+                databaseId: config.appwriteDatabaseId,
+                tableId: config.appwriteTableId,
+                queries: [
+                    Query.equal('userid', userid)
+                ]
+            })
+
+
+        }
+        catch (error) {
+            return false
+
+        }
+    }
+
 
 
     /**

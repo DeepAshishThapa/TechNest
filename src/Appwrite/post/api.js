@@ -1,4 +1,4 @@
-import { Client, TablesDB, ID, Storage, Query, Permission,Role } from "appwrite";
+import { Client, TablesDB, ID, Storage, Query } from "appwrite";
 import config from "../../config/config";
 
 /**
@@ -207,10 +207,7 @@ export class PostService {
                 bucketId: config.appwriteBucketId,
                 fileId: ID.unique(),
                 file,
-                permissions: [
-                    Permission.read(Role.any()),        // 👈 Anyone can view image
-                    
-                ],
+                
 
 
             })

@@ -29,9 +29,7 @@ function YourPosts() {
         setloading(false)
 
 
-
-
-    }, [])
+    }, [userData])
 
 
     return (
@@ -55,8 +53,6 @@ function YourPosts() {
                 ) : (
                     <div>You haven't posted yet</div>
                 )
-
-
 
 
 

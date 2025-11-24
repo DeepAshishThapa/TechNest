@@ -66,7 +66,8 @@ function ResponsiveAppBar() {
   const pages = [
     { name: "Home", slug: "/", active: true },
     { name: "All Posts", slug: "/all-posts", active: true },
-    { name: "Add Posts", slug: "/add-posts", active: authStatus },
+    { name: "Add Posts", slug: "/add-posts", active: true },
+    { name: "Your Posts", slug: "/your-posts", active: authStatus },
   ];
 
 
@@ -189,7 +190,7 @@ function ResponsiveAppBar() {
                 onClose={handleCloseNavMenu}
                 sx={{ display: { xs: 'block', md: 'none' } }}
               >
-                {pages.map((page) => (
+                {pages.map((page) =>page.active && (
                   <MenuItem key={page.slug} onClick={handleCloseNavMenu}>
                     <NavLink
                       key={page.slug}
@@ -231,7 +232,7 @@ function ResponsiveAppBar() {
 
             {/* Desktop menu */}
             <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' }, gap: 5, ml: 5 }}>
-              {pages.map((page) => (
+              {pages.map((page) => page.active && (
                 <NavLink
                   key={page.slug}
                   to={page.slug}

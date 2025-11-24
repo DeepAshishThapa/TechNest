@@ -1,4 +1,4 @@
-import { Client, TablesDB, ID, Storage, Query } from "appwrite";
+import { Client, TablesDB, ID, Storage, Query, Permission } from "appwrite";
 import config from "../../config/config";
 
 /**
@@ -35,7 +35,7 @@ export class PostService {
     * Create a new post in Appwrite
     * rowId = slug (unique identifier)
     */
-    async CreatePost({ slug, title, content, featuredImage, status, userId, tags,userName }) {
+    async CreatePost({ slug, title, content, featuredImage, status, userId, tags, userName }) {
         try {
             return await this.tablesDB.createRow({
                 databaseId: config.appwriteDatabaseId,
@@ -63,7 +63,7 @@ export class PostService {
     /**
      * Update an existing post by slug (rowId)
      */
-    async UpdatePost({ slug, title, content, featuredImage, status, tags,userName }) {
+    async UpdatePost({ slug, title, content, featuredImage, status, tags, userName }) {
         try {
             return await this.tablesDB.updateRow({
                 databaseId: config.appwriteDatabaseId,
@@ -201,12 +201,17 @@ export class PostService {
     /**
      * Upload a file (featuredImage) to Appwrite Storage
      */
-    async uploadfile(file) {
+    async uploadfile(file, userId) {
         try {
             return await this.storage.createFile({
                 bucketId: config.appwriteBucketId,
                 fileId: ID.unique(),
                 file,
+                permissions: [
+                    Permission.read(Role.any()),        // 👈 Anyone can view image
+                    Permission.write(Role.user(userId)) // 👈 Only owner can modify/delete
+                ],
+
 
             })
         }
@@ -235,9 +240,9 @@ export class PostService {
             console.log("Appwrite error", error)
         }
     }
-    
 
-    
+
+
     /**
      * Get public view link for an uploaded file
      */

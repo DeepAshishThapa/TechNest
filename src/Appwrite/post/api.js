@@ -162,7 +162,8 @@ export class PostService {
                 databaseId: config.appwriteDatabaseId,
                 tableId: config.appwriteTableId,
                 queries: [
-                    Query.equal('Tags', tags)
+                    Query.equal('Tags', tags),
+                    Query.orderDesc("$createdAt"),   // 👈 sort by newest first
                 ]
             })
 

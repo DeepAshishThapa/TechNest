@@ -201,7 +201,7 @@ export class PostService {
     /**
      * Upload a file (featuredImage) to Appwrite Storage
      */
-    async uploadfile(file, userId) {
+    async uploadfile(file) {
         try {
             return await this.storage.createFile({
                 bucketId: config.appwriteBucketId,
@@ -209,7 +209,7 @@ export class PostService {
                 file,
                 permissions: [
                     Permission.read(Role.any()),        // 👈 Anyone can view image
-                    Permission.write(Role.user(userId)) // 👈 Only owner can modify/delete
+                    
                 ],
 
 

@@ -92,10 +92,12 @@ export default function MediaCard({ post }) {
         mb: 10,
         px: 1,
         py: 2,
+        position:'relative',
         transition: "0.3s",
         "&:hover": {
           transform: "translateY(-4px)",
           boxShadow: 6,
+          
         },
 
 
@@ -106,7 +108,11 @@ export default function MediaCard({ post }) {
       {isAuthor && (
         <Box sx={{
           display: 'flex',
-          gap: 2
+          gap: 2,
+          position:'absolute',
+          left:13,
+          top:20
+
         }}>
 
           <Link to={`/edit-post/${post.$id}`}>

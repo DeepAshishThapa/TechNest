@@ -138,7 +138,8 @@ export class PostService {
                 databaseId: config.appwriteDatabaseId,
                 tableId: config.appwriteTableId,
                 queries: [
-                    Query.equal("status", "active")
+                    Query.equal("status", "active"),
+                    Query.orderDesc("$createdAt"),   // 👈 sort by newest first
                 ]
 
             })
@@ -235,7 +236,7 @@ export class PostService {
     }
     
 
-
+    
     /**
      * Get public view link for an uploaded file
      */

@@ -6,7 +6,13 @@ import {
   CardMedia,
   Button,
   Typography,
-  Box
+  Box,
+  Dialog,
+  DialogActions,
+  DialogContent,
+  DialogContentText,
+  DialogTitle,
+
 } from '@mui/material';
 
 import postService from '../../Appwrite/post/api';
@@ -15,6 +21,9 @@ import { useNavigate } from 'react-router';
 import parse from 'html-react-parser';
 import authService from '@/Appwrite/auth/auth';
 import Avatar from '@mui/material/Avatar';
+import { useSelector } from 'react-redux';
+import { Link } from 'react-router';
+
 
 
 /**
@@ -33,11 +42,29 @@ export default function MediaCard({ post }) {
   const [imgUrl, setImgUrl] = useState("");      // holds the Appwrite file preview URL
   const navigate = useNavigate()                 // to navigate to detailed post page
   const [userName, setuserName] = useState("")
+  const [openDeleteDialog, setOpenDeleteDialog] = useState(false);    // delete confirm dialog
+
+  const userData = useSelector((state) => state.auth.userData)
+
+  // Open / Close confirmation dialog
+  const handleOpenDeleteDialog = () => setOpenDeleteDialog(true);
+  const handleCloseDeleteDialog = () => setOpenDeleteDialog(false);
 
 
+  const isAuthor = post && userData ? post.userid === userData.$id : false;
 
 
+  // Delete the post (and its file), then navigate away
+  const deletepost = () => {
+    setOpenDeleteDialog(false);
+    postService.deletepost(slug).then((status) => {
+      if (status) {
+        postService.deletefile(post.featuredImage)
+        navigate("/all-posts")
+      }
+    })
 
+  }
 
 
   // ---------- Fetch featured image preview URL ----------
@@ -75,6 +102,28 @@ export default function MediaCard({ post }) {
 
 
       }}>
+      {/*show the edit and delete button*/}
+      {isAuthor && (
+        <Box sx={{
+          display: 'flex',
+          gap: 2
+        }}>
+
+          <Link to={`/edit-post/${post.$id}`}>
+            <Button sx={{ backgroundColor: '#1d0a3d', color: 'white' }}>
+              Edit
+            </Button>
+          </Link>
+
+          <Button
+            variant="contained"
+            color="error"
+            onClick={handleOpenDeleteDialog}
+          >
+            Delete
+          </Button>
+        </Box>
+      )}
       <CardMedia
         component="img"
         sx={{
@@ -120,7 +169,7 @@ export default function MediaCard({ post }) {
           Learn More
         </Button>
         <Box sx={{ display: "flex", alignItems: "center", gap: 1 }}>
-          <Avatar src="/broken-image.jpg" sx={{ width: 30, height: 30 }}/> 
+          <Avatar src="/broken-image.jpg" sx={{ width: 30, height: 30 }} />
           <Typography
             variant="body2"
             sx={{ color: "text.secondary", fontWeight: 900 }}
@@ -136,6 +185,41 @@ export default function MediaCard({ post }) {
 
       </CardActions>
 
+
+      {/* ===== Delete Confirmation Dialog ===== */}
+      <Dialog
+        open={openDeleteDialog}
+        onClose={handleCloseDeleteDialog}
+        aria-labelledby="delete-dialog-title"
+        aria-describedby="delete-dialog-description"
+      >
+        <DialogTitle id="delete-dialog-title">
+          {"Are you sure you want to delete this post?"}
+        </DialogTitle>
+        <DialogContent>
+          <DialogContentText id="delete-dialog-description">
+            This action cannot be undone. The post and its image will be
+            permanently deleted.
+          </DialogContentText>
+        </DialogContent>
+        <DialogActions>
+          <Button onClick={handleCloseDeleteDialog} color="inherit">
+            Cancel
+          </Button>
+          <Button
+            onClick={deletepost}
+            color="error"
+            variant="contained"
+            autoFocus
+          >
+            Delete
+          </Button>
+        </DialogActions>
+      </Dialog>
+
     </Card>
+
+
+
   );
 }

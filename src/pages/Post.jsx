@@ -3,6 +3,7 @@ import postService from '@/Appwrite/post/api'
 import { Link, useNavigate, useParams } from 'react-router'
 import parse from "html-react-parser"
 import { useSelector } from 'react-redux'
+import { useLocation } from 'react-router'
 import Avatar from '@mui/material/Avatar';
 import CommentsSection from '@/components/comments/CommentsSection'
 import {
@@ -22,6 +23,7 @@ function Post() {
     const { slug } = useParams()
     const navigate = useNavigate()
     const userData = useSelector((state) => state.auth.userData)
+    const location = useLocation();
 
 
     // ---------- Local State ----------
@@ -49,6 +51,21 @@ function Post() {
             })
         }
     }, [slug, navigate])
+
+
+    useEffect(() => {
+        if (!post) return;  // wait until post is loaded
+        
+        if (location.state?.scrollToComments) {
+            const el = document.getElementById("comments");
+            if (el) {
+                // small timeout in case comments mount slightly after
+                setTimeout(() => {
+                    el.scrollIntoView({ behavior: "smooth", block: "start" });
+                }, 100);
+            }
+        }
+    }, [location,post]);
 
 
     // ---------- Effects: Resolve image preview URL ----------
@@ -176,7 +193,10 @@ function Post() {
                         </Box>
                     </Box>
                     {/*comments section*/}
-                    <CommentsSection postid={post.$id} />
+
+                    <div id="comments">
+                        <CommentsSection postid={post.$id} />
+                    </div>
                 </Container>
             </Box>
 

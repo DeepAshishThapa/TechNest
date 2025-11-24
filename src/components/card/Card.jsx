@@ -12,10 +12,14 @@ import {
   DialogContent,
   DialogContentText,
   DialogTitle,
-  IconButton
+  IconButton,
+  Snackbar,
+  Alert
+
 
 } from '@mui/material';
 import CommentIcon from '@mui/icons-material/Comment';
+import ShareIcon from "@mui/icons-material/Share";
 
 import postService from '../../Appwrite/post/api';
 import { useState, useEffect } from 'react';
@@ -47,6 +51,12 @@ export default function MediaCard({ post }) {
   const [openDeleteDialog, setOpenDeleteDialog] = useState(false);    // delete confirm dialog
 
   const userData = useSelector((state) => state.auth.userData)
+
+  const [openShareSnack, setOpenShareSnack] = useState(false);
+
+  const handleCloseShareSnack = () => {
+    setOpenShareSnack(false);
+  };
 
   // Open / Close confirmation dialog
   const handleOpenDeleteDialog = () => setOpenDeleteDialog(true);
@@ -87,6 +97,7 @@ export default function MediaCard({ post }) {
 
 
   return (
+    <>
     <Card
       elevation={8}
       sx={{
@@ -187,10 +198,20 @@ export default function MediaCard({ post }) {
           </Typography>
 
           {/* Comment Icon */}
-          <IconButton onClick={() => navigate(`/post/${post.$id}`,{
+          <IconButton onClick={() => navigate(`/post/${post.$id}`, {
             state: { scrollToComments: true },
           })}>
             <CommentIcon sx={{ color: "#1d0a3d" }} />
+          </IconButton>
+
+          {/* Share Icon */}
+          <IconButton
+            onClick={() => {
+              navigator.clipboard.writeText(`${window.location.origin}/post/${post.$id}`);
+              setOpenShareSnack(true);
+            }}
+          >
+            <ShareIcon sx={{ color: "#1d0a3d" }} />
           </IconButton>
 
 
@@ -233,6 +254,20 @@ export default function MediaCard({ post }) {
       </Dialog>
 
     </Card>
+
+    <Snackbar
+        open={openShareSnack}
+        autoHideDuration={2500}
+        onClose={handleCloseShareSnack}
+        anchorOrigin={{ vertical: "top", horizontal: "center" }}
+      >
+        <Alert severity="success" variant="filled" sx={{ width: "100%" }}>
+          Link copied to clipboard!
+        </Alert>
+      </Snackbar>
+
+    </>
+    
 
 
 

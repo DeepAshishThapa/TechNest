@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react"
-import commentsService, { CommentsService } from "@/Appwrite/CommentsService/api"
+import commentsService from "@/Appwrite/CommentsService/api";
 import { useSelector } from "react-redux"
 import { useForm } from "react-hook-form"
 

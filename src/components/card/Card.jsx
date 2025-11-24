@@ -12,8 +12,10 @@ import {
   DialogContent,
   DialogContentText,
   DialogTitle,
+  IconButton
 
 } from '@mui/material';
+import CommentIcon from '@mui/icons-material/Comment';
 
 import postService from '../../Appwrite/post/api';
 import { useState, useEffect } from 'react';
@@ -92,12 +94,12 @@ export default function MediaCard({ post }) {
         mb: 10,
         px: 1,
         py: 2,
-        position:'relative',
+        position: 'relative',
         transition: "0.3s",
         "&:hover": {
           transform: "translateY(-4px)",
           boxShadow: 6,
-          
+
         },
 
 
@@ -109,9 +111,9 @@ export default function MediaCard({ post }) {
         <Box sx={{
           display: 'flex',
           gap: 2,
-          position:'absolute',
-          left:13,
-          top:20
+          position: 'absolute',
+          left: 13,
+          top: 20
 
         }}>
 
@@ -161,7 +163,7 @@ export default function MediaCard({ post }) {
       <CardActions
         sx={{
           display: "flex",
-          gap: 5,
+          justifyContent: "space-between",
           alignItems: "center",
           px: 2,
         }}
@@ -183,6 +185,13 @@ export default function MediaCard({ post }) {
             {post.userName}
 
           </Typography>
+
+          {/* Comment Icon */}
+          <IconButton onClick={() => navigate(`/post/${post.$id}`,{
+            state: { scrollToComments: true },
+          })}>
+            <CommentIcon sx={{ color: "#1d0a3d" }} />
+          </IconButton>
 
 
 

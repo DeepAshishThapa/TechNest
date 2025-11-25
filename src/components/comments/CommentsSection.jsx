@@ -76,7 +76,7 @@ function CommentsSection({ postid }) {
             const result = await commentsService.createComment({
                 postid,
                 userid: userData.$id,
-                username: userData.name,
+                username: userData.name || userData.email || "Anonymous",
                 content,
             });
 

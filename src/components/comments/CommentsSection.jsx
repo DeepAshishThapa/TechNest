@@ -72,15 +72,19 @@ function CommentsSection({ postid }) {
             return;
         }
 
-        const result = await commentsService.createComment({ postid, userid: userData.$id, username: userData.name, content })
+        try {
+            const result = await commentsService.createComment({
+                postid,
+                userid: userData.$id,
+                username: userData.name,
+                content,
+            });
 
-        if (result) {
-            setcomments((prev) => [result, ...prev])    // update UI
-            reset();     // clear input
-
-        }
-        else {
-            alert("failed to post comment")
+            setcomments((prev) => [result, ...prev]);
+            reset();
+        } catch (err) {
+            console.error("Comment submit error:", err);
+            alert("failed to post comment");
         }
     }
 

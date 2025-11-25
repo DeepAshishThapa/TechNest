@@ -22,9 +22,9 @@ export default function PostForm({ post }) {
                 slug: post?.$id || "",
                 content: post?.content || "",
                 status: post?.status || "active",
-                tags:post?.Tags || ""
+                tags: post?.Tags || ""
 
-                
+
             }
         }
     )
@@ -34,9 +34,9 @@ export default function PostForm({ post }) {
     const navigate = useNavigate();                              // Used for navigation after submit or cancel
     const userData = useSelector((state) => state.auth.userData) // Get logged-in user data from Redux
     const [imgUrl, setImgUrl] = useState("");                    // For previewing uploaded image
-    const userName=userData.name                              //get the author name
+    const userName = userData.name                              //get the author name
 
-    
+
 
 
     // Load preview image when editing an existing post
@@ -63,6 +63,11 @@ export default function PostForm({ post }) {
 
     // Handle form submission (create or update)
     const onSubmit = useCallback(async (data) => {
+        if (!userData) return; // optional guard
+
+        const userName =
+            userData.name || userData.email || "Anonymous";  // ✅ never undefined
+
         try {
             if (post) {
                 // --- Editing an existing post ---
@@ -124,7 +129,7 @@ export default function PostForm({ post }) {
         return "";
     }, []);
 
-    
+
 
     return (
         <Box
@@ -219,7 +224,7 @@ export default function PostForm({ post }) {
                                 labelId="active-input"
                                 id="active"
                                 label="Status"
-                                sx={{mb:2}}
+                                sx={{ mb: 2 }}
                             >
                                 <MenuItem value="active">active</MenuItem>
                                 <MenuItem value="inactive">inactive</MenuItem>
@@ -230,7 +235,7 @@ export default function PostForm({ post }) {
                     )}
                 />
 
-                <TagsSelect name="tags" control={control}/>
+                <TagsSelect name="tags" control={control} />
 
 
                 <Box

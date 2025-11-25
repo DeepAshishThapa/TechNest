@@ -79,7 +79,10 @@ function Signup() {
             const { confirmPassword, ...formData } = data;
 
             // Create account using Appwrite
-            const userData = await authService.createAccount(formData)
+            await authService.createAccount(formData)
+
+            // Get the *real* logged-in user object
+            const userData = await authService.getAccount();
 
             // Automatically log user in and update Redux state
             dispatch(login(userData));

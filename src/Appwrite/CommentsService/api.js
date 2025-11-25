@@ -33,7 +33,7 @@ export class CommentsService {
             })
         }
         catch (error) {
-            return false
+            throw error
         }
     }
 

@@ -69,7 +69,7 @@ export default function MediaCard({ post }) {
   // Delete the post (and its file), then navigate away
   const deletepost = () => {
     setOpenDeleteDialog(false);
-    postService.deletepost(slug).then((status) => {
+    postService.deletepost(post.$id).then((status) => {
       if (status) {
         postService.deletefile(post.featuredImage)
         navigate("/all-posts")

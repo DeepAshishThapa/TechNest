@@ -1,12 +1,189 @@
-# React + Vite
+<h1 align="center">🐦 TechNest — A Developer Community Platform</h1>
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+<p align="center">
+  TechNest is a modern web platform where developers, tech enthusiasts, and CS students can share insights, articles, ideas, and real-world learning experiences.
+  <br>
+  <strong>Built entirely from scratch using React, Appwrite, MUI, and Redux Toolkit.</strong>
+</p>
 
-Currently, two official plugins are available:
+<hr>
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+<h2>🚀 Features</h2>
 
-## Expanding the ESLint configuration
+<h3>📝 Full CRUD Posting System</h3>
+<ul>
+  <li>Create, edit, update, and delete posts</li>
+  <li>Rich text editor powered by TinyMCE</li>
+  <li>Supports articles, tech notes, roadmaps, tutorials</li>
+</ul>
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+<h3>🔐 Authentication System</h3>
+<ul>
+  <li>Secure signup & login using Appwrite Auth</li>
+  <li>Session handling & persistent user state</li>
+</ul>
+
+<h3>🔒 Protected Routes & Role-Based Access</h3>
+<ul>
+  <li>Unauthorized users cannot access editor/dashboard</li>
+  <li>Session validation using Appwrite tokens</li>
+  <li>Role logic for authorisation</li>
+</ul>
+
+<h3>💬 Comment Discussions</h3>
+<ul>
+  <li>Each post has a dedicated discussion area</li>
+  <li>Users can ask questions, give feedback, and debate topics</li>
+</ul>
+
+<h3>🏷️ Tag-Based Filtering</h3>
+<ul>
+  <li>Browse posts by categories like:</li>
+  <ul>
+    <li>Web Development</li>
+    <li>AI & Data</li>
+    <li>Career & Jobs</li>
+    <li>Roadmaps</li>
+  </ul>
+</ul>
+
+<h3>📤 Shareable Post Links</h3>
+<ul>
+  <li>Users can share article links anywhere</li>
+</ul>
+
+<h3>📱 Fully Responsive UI</h3>
+<ul>
+  <li>Clean, modern, fully responsive layout</li>
+  <li>Built with Material UI</li>
+</ul>
+
+<hr>
+
+<h2>🧩 Tech Stack Used</h2>
+
+<table>
+  <tr>
+    <td><strong>Frontend Framework</strong></td>
+    <td>React.js (Vite)</td>
+  </tr>
+  <tr>
+    <td><strong>UI Library</strong></td>
+    <td>Material UI (MUI)</td>
+  </tr>
+  <tr>
+    <td><strong>State Management</strong></td>
+    <td>Redux Toolkit</td>
+  </tr>
+  <tr>
+    <td><strong>Routing</strong></td>
+    <td>React Router v6</td>
+  </tr>
+  <tr>
+    <td><strong>Authentication</strong></td>
+    <td>Appwrite Auth</td>
+  </tr>
+  <tr>
+    <td><strong>Database</strong></td>
+    <td>Appwrite Database</td>
+  </tr>
+  <tr>
+    <td><strong>Forms</strong></td>
+    <td>React Hook Form</td>
+  </tr>
+  <tr>
+    <td><strong>Rich Text Editor</strong></td>
+    <td>TinyMCE Editor</td>
+  </tr>
+</table>
+
+<hr>
+
+<h2>📂 Folder Structure</h2>
+
+<pre>
+technest/
+│── public/
+│── src/
+│   ├── app/
+│   │   └── store.js
+│   ├── auth/
+│   │   ├── Login.jsx
+│   │   ├── Signup.jsx
+│   ├── components/
+│   │   ├── Navbar.jsx
+│   │   ├── Footer.jsx
+│   ├── pages/
+│   │   ├── Home.jsx
+│   │   ├── AllPosts.jsx
+│   │   ├── PostDetails.jsx
+│   │   ├── CreatePost.jsx
+│   │   ├── EditPost.jsx
+│   ├── features/
+│   ├── utils/
+│   ├── hooks/
+│   └── main.jsx
+</pre>
+
+<hr>
+
+<h2>📸 Screenshots</h2>
+
+<p>Add your screenshots to the <code>./screenshots/</code> folder and update the image paths below:</p>
+
+<p>
+  <img src="./screenshots/homepage.png" width="600" alt="Homepage">
+</p>
+
+<p>
+  <img src="./screenshots/editor.png" width="600" alt="Editor">
+</p>
+
+<p>
+  <img src="./screenshots/post-page.png" width="600" alt="Post Page">
+</p>
+
+<p>
+  <img src="./screenshots/auth.png" width="600" alt="Authentication">
+</p>
+
+<hr>
+
+<h2>⚙️ Setup Instructions</h2>
+
+<h3>1️⃣ Clone the repository</h3>
+<pre>
+git clone https://github.com/YourUsername/TechNest.git
+</pre>
+
+<h3>2️⃣ Install dependencies</h3>
+<pre>
+npm install
+</pre>
+
+<h3>3️⃣ Set up environment variables</h3>
+<p>Create a <code>.env</code> file in the root:</p>
+
+<pre>
+VITE_APPWRITE_PROJECT_ID=xxxx
+VITE_APPWRITE_ENDPOINT=https://cloud.appwrite.io/v1
+VITE_APPWRITE_DATABASE_ID=xxxx
+VITE_APPWRITE_POSTS_COLLECTION_ID=xxxx
+VITE_APPWRITE_COMMENTS_COLLECTION_ID=xxxx
+</pre>
+
+<h3>4️⃣ Start development server</h3>
+<pre>
+npm run dev
+</pre>
+
+<hr>
+
+<h2>📜 License</h2>
+<p>This project is open source and available under the MIT License.</p>
+
+<hr>
+
+<h2>✨ Author</h2>
+<p><strong>Deep Ashish</strong> — Developer & Creator of TechNest</p>
+<p>GitHub: <a href="https://github.com/DeepAshishThapa">DeepAshishThapa</a></p>

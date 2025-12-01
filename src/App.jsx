@@ -19,6 +19,7 @@ function App() {
       .then((userData) => {
         if (userData) {
           dispatch(login(userData)); //  restore session
+          console.log(userData)
         } else {
           dispatch(logout());
         }

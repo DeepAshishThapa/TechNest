@@ -102,7 +102,7 @@
 
 <h2>📸 Screenshots</h2>
 
-<p>Add your screenshots to the <code>./screenshots/</code> folder and update the image paths below:</p>
+
 
 <p>
   <img src="./screenshot/first.png" width="600" alt="Homepage">

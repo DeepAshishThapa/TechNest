@@ -1,4 +1,9 @@
 <h1 align="center">🐦 TechNest — A Developer Community Platform</h1>
+<p align="center">
+  <a href="https://tech-nest-btly.vercel.app/" target="_blank" style="font-size:20px; font-weight:bold;">
+    🔗 Live Demo — TechNest
+  </a>
+</p>
 
 <p align="center">
   TechNest is a modern web platform where developers, tech enthusiasts, and CS students can share insights, articles, ideas, and real-world learning experiences.

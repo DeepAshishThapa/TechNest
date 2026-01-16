@@ -1,4 +1,4 @@
-<h1 align="center">🐦 TechNest — A Developer Community Platform</h1>
+<h1 align="center"> TechNest — A Developer Community Platform</h1>
 <p align="center">
   <a href="https://tech-nest-btly.vercel.app/" target="_blank" style="font-size:20px; font-weight:bold;">
     🔗 Live Demo — TechNest

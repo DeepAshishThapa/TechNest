@@ -8,7 +8,7 @@
 <p align="center">
   TechNest is a modern web platform where developers, tech enthusiasts, and CS students can share insights, articles, ideas, and real-world learning experiences.
   <br>
-  <strong>Built entirely from scratch using React, Appwrite, MUI, and Redux Toolkit.</strong>
+  <strong>Built from scratch to explore scalable frontend architecture, authenticated workflows, and predictable state management.</strong>
 </p>
 
 <hr>

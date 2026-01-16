@@ -65,6 +65,30 @@
 
 <hr>
 
+<h2>🔧 Engineering Decisions & Learnings</h2>
+
+<ul>
+  <li>
+    Designed centralized state management using <strong>Redux Toolkit</strong> to avoid prop drilling and ensure predictable updates across authentication, posts, and comments.
+  </li>
+
+  <li>
+    Implemented <strong>protected routing</strong> with session validation to handle edge cases such as expired sessions, unauthenticated page refreshes, and unauthorized access.
+  </li>
+
+  <li>
+    Structured <strong>asynchronous data flows</strong> to manage loading, error, and empty states cleanly without blocking the UI.
+  </li>
+
+  <li>
+    Chose <strong>Appwrite as a Backend-as-a-Service</strong> to focus on frontend architecture while still addressing real-world concerns like authentication, permissions, and data security.
+  </li>
+
+  <li>
+    Focused on <strong>component reuse and separation of concerns</strong> to keep the codebase maintainable as features and complexity increased.
+  </li>
+</ul>
+
 <h2>🧩 Tech Stack Used</h2>
 
 <table>

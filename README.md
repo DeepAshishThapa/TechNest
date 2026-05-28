@@ -1,11 +1,8 @@
 <h1 align="center">🐦 TechNest — A Developer Community Platform</h1>
 
 <p align="center">
-
   <a href="https://tech-nest-btly.vercel.app/" target="_blank" style="font-size:20px; font-weight:bold;">
-
     🔗 Live Demo — TechNest
-
   </a>
 
 </p>
@@ -292,4 +289,4 @@ npm run dev
 
 <p><strong>Deep Ashish</strong> — Developer & Creator of TechNest</p>
 
-<p>GitHub: <a href="[https://github.com/DeepAshishThapa">DeepAshishThapa</a></p>](https://github.com/DeepAshishThapa">DeepAshishThapa</a></p>)
+<p>GitHub: <a href="[https://github.com/DeepAshishThapa">DeepAshishThapa</a></p>

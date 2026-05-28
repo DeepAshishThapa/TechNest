@@ -289,4 +289,4 @@ npm run dev
 
 <p><strong>Deep Ashish</strong> — Developer & Creator of TechNest</p>
 
-<p>GitHub: <a href="[https://github.com/DeepAshishThapa">DeepAshishThapa</a></p>
+<p>GitHub: <a href="https://github.com/DeepAshishThapa">DeepAshishThapa</a></p>

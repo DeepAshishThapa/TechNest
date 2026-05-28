@@ -231,7 +231,7 @@ technest/
 
 <pre>
 
-git clone https://github.com/DeepAshishThapa/URLify-url-manager.git
+git clone https://github.com/DeepAshishThapa/TechNest.git
 
 </pre>
 
@@ -257,7 +257,7 @@ npm install
 
 VITE_APPWRITE_PROJECT_ID=xxxx
 
-VITE_APPWRITE_ENDPOINT=[https://syd.cloud.appwrite.io/v1](https://syd.cloud.appwrite.io/v1)
+VITE_APPWRITE_ENDPOINT=https://syd.cloud.appwrite.io/v1
 
 VITE_APPWRITE_DATABASE_ID=xxxx
 

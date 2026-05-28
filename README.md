@@ -164,19 +164,17 @@ technest/
 
 # 📸 Screenshots
 
-<img src="./screenshot/first.png" />  
-  
-<img src="./screenshot/second.png" />  
-  
-<img src="./screenshot/third.png" />  
-  
+<img src="./screenshot/first.png" />
+
+<img src="./screenshot/second.png" />
+
+<img src="./screenshot/third.png" />
+
 <img src="./screenshot/fort.png" />
 
 <img src="./screenshot/fifth.png" />
 
 <img src="./screenshot/sixth.png" />
-
-
 
 ---
 
@@ -184,7 +182,8 @@ technest/
 
 ## 1️⃣ Clone the repository
 
-```bash  
+```bash
+
 git clone [https://github.com/DeepAshishThapa/TechNest.git](https://github.com/DeepAshishThapa/TechNest.git)
 
 cd TechNest

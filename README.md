@@ -1,9 +1,22 @@
+<<<<<<< HEAD
 <h1 align="center">🐦 TechNest — A Developer Community Platform</h1>
+=======
+<h1 align="center"> TechNest — A Developer Community Platform</h1>
+<p align="center">
+  <a href="https://tech-nest-btly.vercel.app/" target="_blank" style="font-size:20px; font-weight:bold;">
+    🔗 Live Demo — TechNest
+  </a>
+</p>
+>>>>>>> e20f01dbdbe7fb46cbff116a64b63b80fa51162b
 
 <p align="center">
   TechNest is a modern web platform where developers, tech enthusiasts, and CS students can share insights, articles, ideas, and real-world learning experiences.
   <br>
+<<<<<<< HEAD
   <strong>Built entirely from scratch using React, Appwrite, MUI, and Redux Toolkit.</strong>
+=======
+ 
+>>>>>>> e20f01dbdbe7fb46cbff116a64b63b80fa51162b
 </p>
 
 <hr>
@@ -49,7 +62,11 @@
 
 <h3>📤 Shareable Post Links</h3>
 <ul>
+<<<<<<< HEAD
   <li>Users can share article links anywhere</li>
+=======
+  <li>Users can share article links anywhere (LinkedIn, Discord, etc.)</li>
+>>>>>>> e20f01dbdbe7fb46cbff116a64b63b80fa51162b
 </ul>
 
 <h3>📱 Fully Responsive UI</h3>
@@ -60,6 +77,33 @@
 
 <hr>
 
+<<<<<<< HEAD
+=======
+<h2>🔧 Engineering Decisions & Learnings</h2>
+
+<ul>
+  <li>
+    Designed centralized state management using <strong>Redux Toolkit</strong> to avoid prop drilling and ensure predictable updates across authentication, posts, and comments.
+  </li>
+
+  <li>
+    Implemented <strong>protected routing</strong> with session validation to handle edge cases such as expired sessions, unauthenticated page refreshes, and unauthorized access.
+  </li>
+
+  <li>
+    Structured <strong>asynchronous data flows</strong> to manage loading, error, and empty states cleanly without blocking the UI.
+  </li>
+
+  <li>
+    Chose <strong>Appwrite as a Backend-as-a-Service</strong> to focus on frontend architecture while still addressing real-world concerns like authentication, permissions, and data security.
+  </li>
+
+  <li>
+    Focused on <strong>component reuse and separation of concerns</strong> to keep the codebase maintainable as features and complexity increased.
+  </li>
+</ul>
+
+>>>>>>> e20f01dbdbe7fb46cbff116a64b63b80fa51162b
 <h2>🧩 Tech Stack Used</h2>
 
 <table>
@@ -99,6 +143,7 @@
 
 <hr>
 
+<<<<<<< HEAD
 <h2>📂 Folder Structure</h2>
 
 <pre>
@@ -145,6 +190,33 @@ technest/
 
 <p>
   <img src="./screenshots/auth.png" width="600" alt="Authentication">
+=======
+
+<h2>📸 Screenshots</h2>
+
+
+
+<p>
+  <img src="./screenshot/first.png" width="600" alt="Homepage">
+</p>
+
+<p>
+  <img src="./screenshot/second.png" width="600" alt="Editor">
+</p>
+
+<p>
+  <img src="./screenshot/third.png" width="600" alt="Post Page">
+</p>
+
+<p>
+  <img src="./screenshot/fort.png" width="600" alt="Authentication">
+</p>
+<p>
+  <img src="./screenshot/fifth.png" width="600" alt="Authentication">
+</p>
+<p>
+  <img src="./screenshot/sixth.png" width="600" alt="Authentication">
+>>>>>>> e20f01dbdbe7fb46cbff116a64b63b80fa51162b
 </p>
 
 <hr>
@@ -153,9 +225,17 @@ technest/
 
 <h3>1️⃣ Clone the repository</h3>
 <pre>
+<<<<<<< HEAD
 git clone https://github.com/YourUsername/TechNest.git
 </pre>
 
+=======
+git clone https://github.com/DeepAshishThapa/TechNest.git
+</pre>
+<pre>
+cd TechNest
+</pre>
+>>>>>>> e20f01dbdbe7fb46cbff116a64b63b80fa51162b
 <h3>2️⃣ Install dependencies</h3>
 <pre>
 npm install
@@ -166,10 +246,18 @@ npm install
 
 <pre>
 VITE_APPWRITE_PROJECT_ID=xxxx
+<<<<<<< HEAD
 VITE_APPWRITE_ENDPOINT=https://cloud.appwrite.io/v1
 VITE_APPWRITE_DATABASE_ID=xxxx
 VITE_APPWRITE_POSTS_COLLECTION_ID=xxxx
 VITE_APPWRITE_COMMENTS_COLLECTION_ID=xxxx
+=======
+VITE_APPWRITE_ENDPOINT=https://syd.cloud.appwrite.io/v1
+VITE_APPWRITE_DATABASE_ID=xxxx
+VITE_APPWRITE_POSTS_COLLECTION_ID=xxxx
+VITE_APPWRITE_COMMENTS_COLLECTION_ID=xxxx
+VITE_APPWRITE_BUCKET_ID=xxxx
+>>>>>>> e20f01dbdbe7fb46cbff116a64b63b80fa51162b
 </pre>
 
 <h3>4️⃣ Start development server</h3>

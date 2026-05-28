@@ -14,107 +14,133 @@
 
   TechNest is a modern web platform where developers, tech enthusiasts, and CS students can share insights, articles, ideas, and real-world learning experiences.
 
+  <br>
+
+  <strong>Built entirely from scratch using React, Appwrite, MUI, and Redux Toolkit.</strong>
+
 </p>
 
-<strong>Built entirely from scratch using React, Appwrite, MUI, and Redux Toolkit.</strong>
+<hr>
 
----
+<h2>🚀 Features</h2>
 
-# 🚀 Features
+<h3>📝 Full CRUD Posting System</h3>
 
-## 📝 Full CRUD Posting System
+<ul>
 
-- Create, edit, update, and delete posts
+  <li>Create, edit, update, and delete posts</li>
 
-- Rich text editor powered by TinyMCE
+  <li>Rich text editor powered by TinyMCE</li>
 
-- Supports articles, tech notes, roadmaps, and tutorials
+  <li>Supports articles, tech notes, roadmaps, and tutorials</li>
 
-## 🔐 Authentication System
+</ul>
 
-- Secure signup and login using Appwrite Auth
+<h3>🔐 Authentication System</h3>
 
-- Session handling and persistent user state
+<ul>
 
-## 🔒 Protected Routes & Role-Based Access
+  <li>Secure signup and login using Appwrite Auth</li>
 
-- Unauthorized users cannot access editor/dashboard
+  <li>Session handling and persistent user state</li>
 
-- Session validation using Appwrite tokens
+</ul>
 
-- Role logic for authorisation
+<h3>🔒 Protected Routes & Role-Based Access</h3>
 
-## 💬 Comment Discussions
+<ul>
 
-- Each post has a dedicated discussion area
+  <li>Unauthorized users cannot access editor/dashboard</li>
 
-- Users can ask questions, give feedback, and debate topics
+  <li>Session validation using Appwrite tokens</li>
 
-## 🏷️ Tag-Based Filtering
+  <li>Role logic for authorisation</li>
 
-Browse posts by categories like:
+</ul>
 
-- Web Development
+<h3>💬 Comment Discussions</h3>
 
-- AI & Data
+<ul>
 
-- Career & Jobs
+  <li>Each post has a dedicated discussion area</li>
 
-- Roadmaps
+  <li>Users can ask questions, give feedback, and debate topics</li>
 
-## 📤 Shareable Post Links
+</ul>
 
-Users can share article links anywhere, such as LinkedIn, Discord, etc.
+<h3>🏷️ Tag-Based Filtering</h3>
 
-## 📱 Fully Responsive UI
+<ul>
 
-- Clean, modern, fully responsive layout
+  <li>Browse posts by categories such as Web Development, AI & Data, Career & Jobs, and Roadmaps</li>
 
-- Built with Material UI
+</ul>
 
----
+<h3>📤 Shareable Post Links</h3>
 
-# 🔧 Engineering Decisions & Learnings
+<ul>
 
-- Designed centralized state management using Redux Toolkit to avoid prop drilling and ensure predictable updates across authentication, posts, and comments.
+  <li>Users can share article links anywhere, such as LinkedIn, Discord, etc.</li>
 
-- Implemented protected routing with session validation to handle edge cases such as expired sessions, unauthenticated page refreshes, and unauthorized access.
+</ul>
 
-- Structured asynchronous data flows to manage loading, error, and empty states cleanly without blocking the UI.
+<h3>📱 Fully Responsive UI</h3>
 
-- Chose Appwrite as a Backend-as-a-Service to focus on frontend architecture while still addressing real-world concerns like authentication, permissions, and data security.
+<ul>
 
-- Focused on component reuse and separation of concerns to keep the codebase maintainable as features and complexity increased.
+  <li>Clean, modern, fully responsive layout</li>
 
----
+  <li>Built with Material UI</li>
 
-# 🧩 Tech Stack Used
+</ul>
 
-| Category | Technology |
+<hr>
 
-|---|---|
+<h2>🔧 Engineering Decisions & Learnings</h2>
 
-| Frontend Framework | React.js (Vite) |
+<ul>
 
-| UI Library | Material UI (MUI) |
+  <li>Designed centralized state management using Redux Toolkit to avoid prop drilling and ensure predictable updates across authentication, posts, and comments.</li>
 
-| State Management | Redux Toolkit |
+  <li>Implemented protected routing with session validation to handle edge cases such as expired sessions, unauthenticated page refreshes, and unauthorized access.</li>
 
-| Routing | React Router v6 |
+  <li>Structured asynchronous data flows to manage loading, error, and empty states cleanly without blocking the UI.</li>
 
-| Authentication | Appwrite Auth |
+  <li>Chose Appwrite as a Backend-as-a-Service to focus on frontend architecture while still addressing real-world concerns like authentication, permissions, and data security.</li>
 
-| Database | Appwrite Database |
+  <li>Focused on component reuse and separation of concerns to keep the codebase maintainable as features and complexity increased.</li>
 
-| Forms | React Hook Form |
+</ul>
 
-| Rich Text Editor | TinyMCE Editor |
+<hr>
 
----
+<h2>🧩 Tech Stack Used</h2>
 
-# 📂 Folder Structure
+<table>
 
-```txt
+  <tr><td><strong>Frontend Framework</strong></td><td>React.js (Vite)</td></tr>
+
+  <tr><td><strong>UI Library</strong></td><td>Material UI (MUI)</td></tr>
+
+  <tr><td><strong>State Management</strong></td><td>Redux Toolkit</td></tr>
+
+  <tr><td><strong>Routing</strong></td><td>React Router v6</td></tr>
+
+  <tr><td><strong>Authentication</strong></td><td>Appwrite Auth</td></tr>
+
+  <tr><td><strong>Database</strong></td><td>Appwrite Database</td></tr>
+
+  <tr><td><strong>Forms</strong></td><td>React Hook Form</td></tr>
+
+  <tr><td><strong>Rich Text Editor</strong></td><td>TinyMCE Editor</td></tr>
+
+</table>
+
+<hr>
+
+<h2>📂 Folder Structure</h2>
+
+<pre>
 
 technest/
 
@@ -158,51 +184,79 @@ technest/
 
 │   └── main.jsx
 
-```
+</pre>
 
----
+<hr>
 
-# 📸 Screenshots
+<h2>📸 Screenshots</h2>
 
-<img src="./screenshot/first.png" />
+<p>
 
-<img src="./screenshot/second.png" />
+  <img src="./screenshot/first.png" width="600" alt="TechNest Screenshot 1">
 
-<img src="./screenshot/third.png" />
+</p>
 
-<img src="./screenshot/fort.png" />
+<p>
 
-<img src="./screenshot/fifth.png" />
+  <img src="./screenshot/second.png" width="600" alt="TechNest Screenshot 2">
 
-<img src="./screenshot/sixth.png" />
+</p>
 
----
+<p>
 
-# ⚙️ Setup Instructions
+  <img src="./screenshot/third.png" width="600" alt="TechNest Screenshot 3">
 
-## 1️⃣ Clone the repository
+</p>
 
-```bash
+<p>
+
+  <img src="./screenshot/fort.png" width="600" alt="TechNest Screenshot 4">
+
+</p>
+
+<p>
+
+  <img src="./screenshot/fifth.png" width="600" alt="TechNest Screenshot 5">
+
+</p>
+
+<p>
+
+  <img src="./screenshot/sixth.png" width="600" alt="TechNest Screenshot 6">
+
+</p>
+
+<hr>
+
+<h2>⚙️ Setup Instructions</h2>
+
+<h3>1️⃣ Clone the repository</h3>
+
+<pre>
 
 git clone [https://github.com/DeepAshishThapa/TechNest.git](https://github.com/DeepAshishThapa/TechNest.git)
 
+</pre>
+
+<pre>
+
 cd TechNest
 
-```
+</pre>
 
-## 2️⃣ Install dependencies
+<h3>2️⃣ Install dependencies</h3>
 
-```bash
+<pre>
 
 npm install
 
-```
+</pre>
 
-## 3️⃣ Set up environment variables
+<h3>3️⃣ Set up environment variables</h3>
 
-Create a `.env` file in the root:
+<p>Create a <code>.env</code> file in the root:</p>
 
-```env
+<pre>
 
 VITE_APPWRITE_PROJECT_ID=xxxx
 
@@ -216,26 +270,26 @@ VITE_APPWRITE_COMMENTS_COLLECTION_ID=xxxx
 
 VITE_APPWRITE_BUCKET_ID=xxxx
 
-```
+</pre>
 
-## 4️⃣ Start development server
+<h3>4️⃣ Start development server</h3>
 
-```bash
+<pre>
 
 npm run dev
 
-```
+</pre>
 
----
+<hr>
 
-# 📜 License
+<h2>📜 License</h2>
 
-This project is open source and available under the MIT License.
+<p>This project is open source and available under the MIT License.</p>
 
----
+<hr>
 
-# ✨ Author
+<h2>✨ Author</h2>
 
-Deep Ashish — Developer & Creator of TechNest
+<p><strong>Deep Ashish</strong> — Developer & Creator of TechNest</p>
 
-GitHub: DeepAshishThapa
+<p>GitHub: <a href="[https://github.com/DeepAshishThapa">DeepAshishThapa</a></p>](https://github.com/DeepAshishThapa">DeepAshishThapa</a></p>)

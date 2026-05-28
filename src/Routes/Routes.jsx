@@ -21,6 +21,7 @@ function AppRoutes() {
           <Route path="login" element={<Loginpage />} />
           <Route path="signup" element={<Signuppage />} />
           <Route path="all-posts" element={<Allposts />} />
+          <Route path="all-posts/:categorySlug" element={<Allposts />} />
           <Route path="your-posts" element={<YourPostspage/>} />
           <Route path="post/:slug" element={<Post />} />
 

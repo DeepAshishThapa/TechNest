@@ -184,8 +184,7 @@ technest/
 
 ## 1️⃣ Clone the repository
 
-```bash
-
+```bash  
 git clone [https://github.com/DeepAshishThapa/TechNest.git](https://github.com/DeepAshishThapa/TechNest.git)
 
 cd TechNest

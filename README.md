@@ -2,7 +2,7 @@
 
 <p align="center">
 
-  <a href="[https://tech-nest-btly.vercel.app/](https://tech-nest-btly.vercel.app/)" target="_blank">
+  <a href="https://tech-nest-btly.vercel.app/" target="_blank" style="font-size:20px; font-weight:bold;">
 
     🔗 Live Demo — TechNest
 
@@ -234,7 +234,7 @@ technest/
 
 <pre>
 
-git clone [https://github.com/DeepAshishThapa/TechNest.git](https://github.com/DeepAshishThapa/TechNest.git)
+git clone https://github.com/DeepAshishThapa/URLify-url-manager.git
 
 </pre>
 
